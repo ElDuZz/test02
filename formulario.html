@@ -3,15 +3,68 @@
     label,input{
     }
 </style>
-<form>
+<form action="index.html"  autocomplete="off">
+    <fieldset>
+        <legend>Datos</legend>
+        <label for="idEmpleado">Num. Empleado</label>
+        <input type="text" name="idEmpleado" id="idEmpleado" disabled="true" value="244654">
+        <br><br>
+        <input type="hidden" name="sistema" id="sistema" value="SAP">
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" placeholder="Escribe tu nombre" name="nombre" required="true"><br>
     <label for="apellido">Apellido:</label>
     <input type="text" name="apellido" id="apellido" placeholder="Escribe tu apellido" required="true"><br>
     <label for="password">Contraseña</label>
-    <input type="password" name="password" id="password" placeholder="Agrega una contraseña" required="true" 
-    pattern="[A-Za-z0-9]{5-10}" title="Letras y numeros. Tamaño minimo : 5. Tamaño maximo: 10">
+    <input type="password" id="password" name="password" placeholder="Agrega una contraseña" required="true" 
+    pattern="[A-Za-z0-9]{0-9}" title="Letras y numeros. Tamaño minimo : 5. Tamaño maximo: 10"/>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Agrega una cuenta de correo electronico" name="email" required="true"/>
+    <br>
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" placeholder="edad" name="edad" required="true" min="0" max="100" minlength="1" maxlength="3">
+    <br>
+    <label>Genero</label>
+    <br>
+    <input type="radio" id="femenino" name="genero" value="femenino">
+    <label for="femenino">femenino</label>
+    <br>
+    <input type="radio" name="genero" id="masculino" value="masculino">
+    <label for="masculino">masculino</label>
+    <br>
+    <label>Temas de interes:</label>
+    <br>
+    <input type="checkbox" name="temas_interes" id="html" value="html">
+    <label for="html">HTML</label>
+    <br>
+    <input type="checkbox" name="temas_interes" id="JavaScript" value="JavaScript">
+    <label for="JavaScript"> JavaScript</label>
+    <br>
+    <input type="checkbox" name="temas_interes" id="CCS" value="CCS">
+    <label for="CCS"> CCS</label>
+    <br>
+    <input type="checkbox" name="temas_interes" id="Bootstrap" value="Bootstrap">
+    <label for="Bootstrap"> Bootstrap</label>
+    <br>    
+    <label>Nivel Academico: </label>
+    <br>
+    <select name="nivel_academico" id="nivel_academico" multiple="true">
+        <option value="primaria">Primaria</option>
+        <option value="secundaria">Secundaria</option>
+        <option value="bachilleres">Bachilleres</option>
+        <option value="licenciatura">Licenciatura</option>
+        <option value="posgrado" selected="true">Posgrado</option>
+    </select>
+    <br>
+    <label for="comentario">comentario:</label>
+    <br>
+    <textarea name="comentario" id="comentario" cols="30" rows="2">Este es mi comentario</textarea>
+    <br><br>
     <br>
     <input type="submit" value="Guardar">
     <input type="submit" formnovalidate="formnovalidate" value="Enviar sin validar">
+    <input type="reset" value="Restablecer">
+</fieldset>
 </form>
+
+<br><br>
